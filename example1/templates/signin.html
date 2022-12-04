@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bid_It</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        *
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html
+{
+    font-family: 'Poppins', sans-serif;
+
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 10%;
+}
+body {
+ background-image: url("images/backgroundimg2.jpg");
+ background-color: #cccccc;
+}
+
+.form-content
+{
+    text-align: center;
+}
+form
+{
+    display: inline-block;
+}
+
+label
+{
+    font-size: 18px;
+    text-align:left;
+    display: block;
+    margin-bottom: -16px;
+}
+input{
+    width: 270px;
+    padding: 8px 24px ;
+    border-radius: 12px;
+}
+.pwd,.uname
+{
+    margin-bottom: 8px;
+}
+.sbmt
+{
+    display: inline-block;
+    background-color: #b6e0f2;
+}
+
+    </style>
+</head>
+<body>
+  <br>
+  <br>
+  <br>
+  {% load static %}
+  <img src = "{% static 'images/Bid-it.jpg' %}"  width="70ps" class="center">
+<!--   <img src="{% static "dj_app/media/house.jpg" %}" alt="home" />-->
+  <h3 class="center">Bid_It</h3>
+  <br><br>
+
+    <div class="form-content">
+    <form method="post" action="signin">
+
+        {% csrf_token %}
+
+        <label>USER NAME</label>
+        <br/>
+        <input type="text" class ="pwd" name="username" placeholder="Enter your Full Name" required/>
+        <br/>
+        <label>Password</label>
+        <br/>
+        <input type="password" class ="pwd" name="password" placeholder="Enter your password" required/>
+        <br/>
+        <small><a href="#">forgot password?</a></small>
+        <br>
+        <input type="submit" name="sbmt"/>
+        <br>
+        <small>if You did not accout Create new!</small>
+        <small><a href="signup">signup</a></small>
+    </form>
+        <div>
+            {% for message in messages %}
+            <h3>  {{message}}  </h3>
+            {% endfor %}
+        </div>
+</div>
+</body>
+</html>

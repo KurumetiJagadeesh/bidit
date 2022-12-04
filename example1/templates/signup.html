@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bid_It</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="project.css">
+     <style>
+        *
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html
+{
+    font-family: 'Poppins', sans-serif;
+
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 10%;
+}
+body {
+ background-image: url("images/backgroundimg1.jpg");
+ background-color: #cccccc;
+}
+
+.form-content
+{
+    text-align: center;
+}
+form
+{
+    display: inline-block;
+}
+
+label
+{
+    font-size: 18px;
+    text-align:left;
+    display: block;
+    margin-bottom: -16px;
+}
+input{
+    width: 270px;
+    padding: 8px 24px ;
+    border-radius: 12px;
+}
+.pwd,.uname
+{
+    margin-bottom: 8px;
+}
+.sbmt
+{
+    display: inline-block;
+    background-color: #b6e0f2;
+}
+
+    </style>
+</head>
+<body>
+
+  <img src="{% static 'images/Bid-it.jpg' %}" alt="Paris" width="70ps" class="center">
+  <h3 class="center">Bid_It</h3>
+  <br><br>
+
+
+    <div class="form-content">
+    <form  action="signup" method="post">
+        {% csrf_token %}
+        <label>Email</label>
+        <br/>
+        <input type="email"name="email" class="uname" placeholder="Enter your mail" required/>
+        <br/>
+        <label>FIRST NAME</label>
+        <br/>
+        <input type="text" class ="pwd" name="first_name" placeholder="Enter your First Name" required/>
+        <br/>
+        <label>LAST NAME</label>
+        <br/>
+        <input type="text" class ="pwd" name="last_name" placeholder="Enter your Last Name" required/>
+        <br/>
+        <label>USER NAME</label>
+        <br/>
+        <input type="text" class ="pwd" name="username" placeholder="Enter your Full Name" required/>
+        <br/>
+        <label>Password</label>
+        <br/>
+        <input type="password" class ="pwd" name="password1" placeholder="Enter your password" required/>
+        <br/>
+        <label>Conform your Password</label>
+        <br/>
+        <input type="password" class ="pwd" name="password2" placeholder="Enter your password" required/>
+        <br/>
+
+        <input type="submit" name="sbmt"/>
+        <br>
+        
+    </form>
+        <div>
+            {% for message in messages %}
+            <h3>  {{message}}  </h3>
+            {% endfor %}
+        </div>
+        <br>
+        <br>
+</div>
+</body>
+</html>

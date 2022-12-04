@@ -1,0 +1,191 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="project.css">
+
+    <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+    <title>Bit_It</title>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+  </head>
+  <body class="p-3 m-0 border-0 bd-example">
+
+
+
+  <div class="container-fluid">
+    <nav class="navbar sticky-top navbar-expand-lg bg-info navbar-dark">
+      <div class="container-fluid">
+      <a href="#" class="navbar-brand mb-0 h1"><img src="{% static 'images/Bid-it.jpg' %}" width="40" alt="40">Bid_It</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="home">Home</a>
+            </li>
+            <div class="container-fluid">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Tody Deals</a>
+            </li>
+            </div>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Types
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Electronics</a></li>
+                <li><a class="dropdown-item" href="#">Fashion</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Auto Mobiles</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled">Famous</a>
+            </li>
+          </ul>
+          <div class="container-fluid">
+          <div class="container">
+
+
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" style="width: 400px;" aria-label="Search">
+            <button class="btn btn-primary" type="submit">Search</button>
+
+          </form>
+        </div>
+        </div>
+        <div class="container">
+
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="bi bi-person-square"></i>
+
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Account</a></li>
+              <li><a class="dropdown-item" href="#">Add an product</a></li>
+              <li><a class="dropdown-item" href="#">Your Purchaces</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="/">sign out</a></li>
+            </ul>
+          </li>
+        </div>
+        </div>
+        </div>
+      </div>
+    </nav>
+    <br>
+    <br>
+
+
+      <div class="featured-products grid grid-4-cols container">
+        <figure>
+          <img
+            src="{% static 'images/circketBat.jpg' %}"
+            alt="Genius MRF Popular Willow Cricket Bat with Cover (No. 6)"
+          >
+          <p> <a href="product1"> Genius CEAT Popular Willow Cricket Bat with Cover (No. 6) </a></p>
+          <p class="product-title">Sport Item</p>
+
+          <p class="product-price pricing"><span>₹</span>1,999</p>
+        </figure>
+        <figure>
+          <img src="{% static 'images/laptop.jpg' %}" alt="Lenovo IdeaPad 5 (14, AMD) | 14 powerful and affordable laptop | Lenovo IndiaVisit"
+  />
+          <p><a href="product">Lenovo IdeaPad 5 (14, AMD) | 14 powerful and affordable laptop | Lenovo IndiaVisit</a></p>
+          <p class="product-title">Lenovo Laptops</p>
+
+          <p class="product-price pricing"><span>₹</span>69,999</p>
+        </figure>
+
+
+        <figure>
+          <img src="{% static 'images/tv.jpg' %}" alt="TCL P615 4K Android TV With TCL AI IN - TCL Global"/>
+          <p><a href="product3">TCL P615 4K Android TV With TCL AI IN - TCL Global</a></p>
+          <p class="product-title">Electronics</p>
+          <p class="product-price pricing"><span>₹</span>35,999</p>
+        </figure>
+
+
+        <figure>
+          <img src="{% static 'images/APPLEphone.jpg' %}" alt=" Original iPhone 11"/>
+          <p><a href="product4">Original iPhone 11</a></p>
+          <p class="product-title">Electronics</p>
+          <p class="product-price pricing"><span>₹</span>29,999</p>
+        </figure>
+
+
+        <figure>
+          <img src="{% static 'images/samsungmobile.jpg' %}" alt="Samsung Galaxy S20 FE 5G (Cloud Navy, 8GB RAM, 128GB Storage)Additional Exchange Offers" width="160ps"/>
+          <p><a href="product5">Samsung Galaxy S20 FE 5G (Cloud Navy, 8GB RAM, 128GB Storage)Additional Exchange Offers</a></p>
+          <p class="product-title">Electronics</p>
+          <p class="product-price pricing"><span>₹</span>15,299</p>
+        </figure>
+  </div>
+<br>
+
+  <div class="featured-products grid grid-4-cols container">
+        <figure>
+          <img src="static/images/sofa.jpg" alt=" " />
+          <p><a href="product6">Godrej Interio Buy Broadway V2 Fabric Sofa Set in Ada Granite Upto 25 percentage Discount | Godrej Interio</a></p>
+          <p class="product-title">Trendy Combo</p>
+          <p class="product-price pricing"><span>₹</span>50,999</p>
+        </figure>
+
+
+        <figure>
+          <img src="static/images/computertable.jpg" alt="Klaxon Joe Wood & Metal Study Table/Laptop/Computer Table Desk - Asian Walnut & Black (DIY)" width="200ps"/>
+          <p><a href="product7">Klaxon Joe Wood & Metal Study Table/Laptop/Computer Table Desk - Asian Walnut & Black (DIY)</a></p>
+          <p class="product-title">computer needs</p>
+          <span>₹</span>1,599</p>
+        </figure>
+
+
+        <figure>
+          <img src="static/images/watch.jpg" alt="" width="200ps"/>
+          <p><a href="#">Titan Watches India on Twitter: "Introducing Titan Maritime II, a collection inspired by the voyage of progress in the steamship era.
+</a></p>
+          <p class="product-title">Accessories</p>
+          <span>₹</span>4,599</p>
+        </figure>
+
+        <figure>
+          <img src="static/images/painting.jpg" alt="" width="300ps"/>
+          <p><a href="#">Walking in the Rain / Red Acrylic Painting </a></p>
+          <p class="product-title">Decoration Item</p>
+          <span>₹</span>19,999</p>
+        </figure>
+        <figure>
+          <img src="static/images/sign.jpg" alt="" width="250ps"/>
+          <p><a href="#">VERY RARE Autograph Photo of 1983 Cricket world cup winning team member Dilip Vengsarkar : cricket</a></p>
+          <p class="product-title"></p>
+          <span>₹</span>3,999</p>
+        </figure>
+
+
+
+</div>
+      <h3 class="feature-heading">Latest-products</h3>
+
+      <div class="featured-products grid grid-4-cols container">
+
+      </div>
+
+
+
+
+
+
+  </body>
+</html>
